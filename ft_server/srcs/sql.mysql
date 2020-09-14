@@ -1,0 +1,4 @@
+CREATE DATABASE my_db;
+GRANT ALL PRIVILEGES ON my_db.* TO 'root'@'localhost';
+FLUSH PRIVILEGES;
+update mysql.user set plugin = 'mysql_native_password' where user='root';
